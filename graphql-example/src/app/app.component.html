@@ -1,0 +1,10 @@
+<div>
+  <ng-container *ngFor="let track of tracks; let i = index;">
+    <track-card [track]="tracks[i]" [fullTrack]="fullTracks[i]"></track-card>
+  </ng-container>
+  <div class="navbar">
+    <button class="logout" (click)="logout()">Logout</button>
+    <label class="label">Enter tracks to load:</label>
+    <input class="label" type="number" id="amount" name="amount" (change)="trackAmountChange($event)">
+  </div>
+</div>
